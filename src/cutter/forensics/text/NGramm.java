@@ -221,7 +221,7 @@ public class NGramm {
 	 */
 	public static String removeWordsFromText(String text, List<String> remove){
 		for(int i = 0; i<remove.size(); i++){
-			text = text.replace(remove.get(i), " ");
+			text = text.replace(remove.get(i), "");
 		}
 		return text;
 	}
