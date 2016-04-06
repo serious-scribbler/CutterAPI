@@ -1,6 +1,6 @@
-cutter.forensics.text
-cutter.http
-cutter.imageprocessing
-cutter.math
-cutter.math.vectors
-cutter.tools
+com.cutterapi.http
+com.cutterapi.imageprocessing
+com.cutterapi.math
+com.cutterapi.math.vectors
+com.cutterapi.text
+com.cutterapi.tools
