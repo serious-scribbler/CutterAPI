@@ -2,5 +2,6 @@ com.cutterapi.http
 com.cutterapi.imageprocessing
 com.cutterapi.math
 com.cutterapi.math.vectors
+com.cutterapi.systemevents
 com.cutterapi.text
 com.cutterapi.tools

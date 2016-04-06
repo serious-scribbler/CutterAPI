@@ -15,6 +15,7 @@ public class WirelessSsidReader {
 	private boolean keepRunning = false;
 	private Thread reader = new Thread(new WirelessReader());
 	private List<String> interfaceNames = new ArrayList<String>();
+	private List<SsidListener> listeners = new ArrayList<SsidListener>();
 	
 	/**
 	 * The WirelessSsidReader continuously reads information about the available and connected wireless networks ssids
@@ -84,7 +85,17 @@ public class WirelessSsidReader {
 	
 	//Send updated informations to SsidListeners
 	private void networkUpdate(NetworkInformation info){
-		//inform listeners
+		for(SsidListener listener : listeners){
+			listener.onSsidInfoUpdate(info);
+		}
+	}
+	
+	/**
+	 * Add a SsidListener to to make it receive ssids of connected and avaible wireless networks whenever the set update interval is reached
+	 * @param listener
+	 */
+	public void addSsidListener(SsidListener listener){
+		listeners.add(listener);
 	}
 	
 	//Reads the network information
